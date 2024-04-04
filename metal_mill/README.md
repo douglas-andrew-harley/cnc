@@ -98,14 +98,14 @@ We are using an old desktop PC from a thrift store.  An alarm panel or similar w
 
 ### Panel for connectors
 
-The file [panel_cutouts.FCStd](panel_cutouts.FCStd) (created with FreeCAD) documents the panel cutouts to accept the various panel mount jacks the cabinet uses to connect to the motors, limit switches, FCCH_RFID_ESTOP_module, power, and Ethernet to the computer running LinuxCNC
+The file [panel_cutouts.FCStd](panel_cutouts.pdf) (created with FreeCAD) documents the panel cutouts to accept the various panel mount jacks the cabinet uses to connect to the motors, limit switches, FCCH_RFID_ESTOP_module, power, and Ethernet to the computer running LinuxCNC
 
 
 ## Controller Cabinet Cable Harnesses
 
 Inside the controller cabinet, all components are connected via the following wire harnesses. The Wn label of each harness refers to the designation in the schematic.
 
-The schematic [fcch-mill-ctrl-wiring.dxf](metal_mill_wiring.sch) (created in EagleCAD) documents the connections.
+The schematic [metal_mill_wiring.sch](metal_mill_wiring.pdf) (created in EagleCAD) documents the connections.
 
 ### Cables required
 
@@ -248,4 +248,4 @@ This is a custom PCB in a separate enclosure that can be mounted in a accessible
 
 The ERR/RES lines of the G320X drivers are brought to this module. They are attached to ground (which inhibits the drivers) through the normally closed contacts of a safety relay. When both a valid RFID tag is present and the E-Stop switch is not active, the relay is energized, breaking the connection to ground and enabling the drivers.
 
-The file [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.sch) contains the schematic for the custom PCB.
+The file [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) contains the schematic for the custom PCB.
