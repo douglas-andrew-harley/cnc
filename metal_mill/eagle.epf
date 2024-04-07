@@ -275,6 +275,7 @@ UsedLibrary="/home/bobg/EAGLE/libraries/Texas Instruments - PCA9536DGKR.lbr"
 UsedLibrary="/home/bobg/EAGLE/libraries/Texas Instruments - TCA9554PWR.lbr"
 UsedLibrary="/home/bobg/EAGLE/libraries/switch-tact.lbr"
 UsedLibrary="/home/bobg/EAGLE/projects/OvenRepair/libraries/2023-11-19_07-53-20_Library.lbr"
+UsedLibrary="/home/bobg/github/cnc/metal_mill/fcch_eagle_parts_metal_mill.lbr"
 
 [Win_1]
 Type="Control Panel"

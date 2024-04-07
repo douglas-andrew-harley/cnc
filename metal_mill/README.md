@@ -7,6 +7,14 @@ It consists of 2 parts
 1) a controller cabinet that controls the motors in accordance to instructions from a computer running LinuxCNC and
 2) an RFID and E-Stop module that connects to the controller cabinet to controll whether the servo drives are enabled.
 
+Design File PDFs
+
+* [metal_mill_wiring.sch](metal_mill_wiring.pdf) (created in EagleCAD)
+* [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) (created in EagleCAD)
+* [FCCH_RFID_ESTOP.brd](FCCH_RFID_ESTOP.brd.pdf) (created in EagleCAD)
+* [panel_cutouts.FCStd](panel_cutouts.pdf) (created in FreeCAD)
+
+
 ## Controller Cabinet Components
 
 * (1) 7i96s Controller
@@ -239,13 +247,38 @@ bare leads to bare leads
 
 * 18 gauge 2 conductor red/black
 
-## E-Stop and RFID Module
+## E-Stop and RFID Module (FCCH_RFID_ESTOP)
 
-This is a custom PCB in a separate enclosure that can be mounted in a accessible location on the mill for the operator to interact with. It provides two functions.
+This is a custom PCB in a separate enclosure that can be mounted in a accessible location on the mill for the operator to interact with. The enclosure contains this custom PCB and also the FCCH RFID PCB. An 8 pin GX16-8 Aviation connector connects this enclosure with the controller cabinet.
+
+The FCCH_RFID_ESTOP module provides two functions.
 
 1) RFID Authorization. Major machines at the FCCH (fort Collins Creator Hub) have RFID based access control. When an authorized RFID tag is not present in the V slot of this module, the axis motors are inhibited.
 2) E-Stop switch. If the E-Stop is pressed, the axis motors are inhibited.
 
 The ERR/RES lines of the G320X drivers are brought to this module. They are attached to ground (which inhibits the drivers) through the normally closed contacts of a safety relay. When both a valid RFID tag is present and the E-Stop switch is not active, the relay is energized, breaking the connection to ground and enabling the drivers.
 
-The file [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) contains the schematic for the custom PCB.
+The file [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) contains the schematic for the custom PCB and [FCCH_RFID_ESTOP.brd](FCCH_RFID_ESTOP.brd.pdf) is the board layout.
+
+## FCCH_RFID_ESTOP Cable Harnesses
+
+### (EW1) GX16-8 connector to FCCH_RFID_ESTOP board
+
+1 needed
+GX16-8 panel mount side to bare leads
+
+* Ethernet cable soldered to the panel mount. Wires connected per schematic to screw terminals of the FCCH_RFID_ESTOP board.
+
+### (EW2) FCCH_RFID_ESTOP board to FCCH_RFID board
+
+1 needed
+bare leads to bare leads
+
+* 22 gauge 4 conductor cable
+
+### (EW3) Controller Cabinet to FCCH_RFID_ESTOP module
+
+1 needed
+GX16-8 to GX16-8
+
+Ethernet cable soldered to the free hanging side of the GX16-8 connects. All pins pass through straight.

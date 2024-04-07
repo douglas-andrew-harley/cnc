@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -56,6 +56,9 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
+<layer number="100" name="components" color="7" fill="1" visible="no" active="yes"/>
+<layer number="101" name="FabPrint" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <library>
 <packages>
@@ -257,6 +260,176 @@
 <pad name="RESET_IN-" x="3.81" y="-1.27" drill="0.6" shape="square"/>
 <pad name="RESET_IN+" x="3.81" y="-2.54" drill="0.6" shape="square"/>
 <pad name="+12V" x="-3.81" y="3.81" drill="0.6" shape="square"/>
+</package>
+<package name="NC4D-JP">
+<pad name="ACOM" x="-15.24" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="BCOM" x="-10.16" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="COIL-" x="-2.54" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="COIL+" x="2.54" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="CCOM" x="10.16" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="DCOM" x="15.24" y="-13.97" drill="1.1938" diameter="2.794" rot="R270"/>
+<pad name="DNO" x="17.78" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="DNC" x="12.7" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="CNC" x="7.62" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="CNO" x="2.54" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="BNO" x="-2.54" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="BNC" x="-7.62" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="ANC" x="-12.7" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<pad name="ANO" x="-17.78" y="13.97" drill="1.1938" diameter="2.794" rot="R90"/>
+<wire x1="-19.05" y1="12.7" x2="19.05" y2="12.7" width="0.127" layer="21"/>
+<wire x1="19.05" y1="12.7" x2="19.05" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="19.05" y1="-12.7" x2="-19.05" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="-19.05" y1="-12.7" x2="-19.05" y2="12.7" width="0.127" layer="21"/>
+<text x="-5.08" y="2.54" size="1.27" layer="21">4PDT Relay</text>
+</package>
+<package name="CONN4-2.54P" library_version="3" library_locally_modified="yes">
+<description>4 Position Wire to Board Terminal Block Horizontal with Board 0.100" (2.54mm) Through Hole</description>
+<wire x1="-5.435" y1="3.4" x2="-5.435" y2="-3.4" width="0.15" layer="51"/>
+<wire x1="-5.435" y1="-3.4" x2="5.435" y2="-3.4" width="0.15" layer="51"/>
+<wire x1="5.435" y1="-3.4" x2="5.435" y2="3.4" width="0.15" layer="51"/>
+<wire x1="5.435" y1="3.4" x2="-5.435" y2="3.4" width="0.15" layer="51"/>
+<wire x1="-5.45" y1="3.4" x2="5.45" y2="3.4" width="0.15" layer="21"/>
+<wire x1="5.45" y1="-3.4" x2="5.45" y2="3.4" width="0.15" layer="21"/>
+<wire x1="-5.45" y1="-3.4" x2="5.45" y2="-3.4" width="0.15" layer="21"/>
+<wire x1="-5.45" y1="-3.4" x2="-5.45" y2="3.4" width="0.15" layer="21"/>
+<text x="-5.435" y="3.7" size="1" layer="25">&gt;NAME</text>
+<pad name="1" x="-3.81" y="0" drill="1.1" diameter="1.7" shape="square"/>
+<pad name="2" x="-1.27" y="0" drill="1.1" diameter="1.7"/>
+<pad name="3" x="1.27" y="0" drill="1.1" diameter="1.7"/>
+<pad name="4" x="3.81" y="0" drill="1.1" diameter="1.7"/>
+<wire x1="-3.81" y1="-1.143" x2="-3.81" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-2.921" x2="-4.191" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-2.921" x2="-3.429" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-1.143" x2="-1.27" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.921" x2="-1.651" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.921" x2="-0.889" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.143" x2="1.27" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-2.921" x2="0.889" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-2.921" x2="1.651" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.143" x2="3.81" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.921" x2="3.429" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.921" x2="4.191" y2="-2.286" width="0.127" layer="21"/>
+</package>
+<package name="CONN4_3.81P" library_version="3" library_locally_modified="yes">
+<pad name="1" x="0" y="0" drill="0.889" diameter="1.397" shape="square"/>
+<pad name="2" x="3.81" y="0" drill="0.889" diameter="1.397"/>
+<pad name="3" x="7.62" y="0" drill="0.889" diameter="1.397"/>
+<pad name="4" x="11.43" y="0" drill="0.889" diameter="1.397"/>
+<wire x1="-2.032" y1="-3.5306" x2="13.462" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="13.462" y1="-3.5306" x2="13.462" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="13.462" y1="4.1148" x2="-2.032" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="4.1148" x2="-2.032" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-3.4036" x2="13.335" y2="-3.4036" width="0.1524" layer="51"/>
+<wire x1="13.335" y1="-3.4036" x2="13.335" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="13.335" y1="3.9878" x2="-1.905" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="-1.905" y1="3.9878" x2="-1.905" y2="-3.4036" width="0.1524" layer="51"/>
+<wire x1="0.381" y1="2.2098" x2="-0.381" y2="2.2098" width="0.508" layer="51" curve="-180"/>
+<wire x1="-0.381" y1="2.2098" x2="0.381" y2="2.2098" width="0.508" layer="51" curve="-180"/>
+<text x="2.4384" y="-0.3302" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="3.9878" y="-0.3302" size="1.27" layer="27" ratio="6" rot="SR0">&gt;Value</text>
+</package>
+<package name="CONN2_2.54P" library_version="3" library_locally_modified="yes">
+<description>TERMI-BLOK PCB MOUNT, 90 2P</description>
+<wire x1="-2.77" y1="-3.25" x2="-2.77" y2="3.25" width="0.15" layer="51"/>
+<wire x1="-2.77" y1="3.25" x2="2.77" y2="3.25" width="0.15" layer="51"/>
+<wire x1="2.77" y1="3.25" x2="2.77" y2="-3.25" width="0.15" layer="51"/>
+<wire x1="2.77" y1="-3.25" x2="-2.77" y2="-3.25" width="0.15" layer="51"/>
+<wire x1="-2.77" y1="-3.25" x2="-2.77" y2="3.25" width="0.15" layer="21"/>
+<wire x1="-2.77" y1="3.25" x2="2.77" y2="3.25" width="0.15" layer="21"/>
+<wire x1="2.77" y1="3.25" x2="2.77" y2="-3.25" width="0.15" layer="21"/>
+<wire x1="2.77" y1="-3.25" x2="-2.77" y2="-3.25" width="0.15" layer="21"/>
+<text x="-3.05" y="3.625" size="1" layer="25">&gt;NAME</text>
+<pad name="1" x="-1.27" y="0" drill="1.1" diameter="1.7" shape="square"/>
+<pad name="2" x="1.27" y="0" drill="1.1" diameter="1.7"/>
+<wire x1="-1.27" y1="-1.143" x2="-1.27" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.921" x2="-1.651" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.921" x2="-0.889" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.143" x2="1.27" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-2.921" x2="0.889" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-2.921" x2="1.651" y2="-2.286" width="0.127" layer="21"/>
+</package>
+<package name="CONN2_3.81P" library_version="3" library_locally_modified="yes">
+<pad name="1" x="0" y="0" drill="1.3" shape="square"/>
+<pad name="2" x="3.81" y="0" drill="1.3"/>
+<wire x1="-2.032" y1="-3.5306" x2="5.842" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="5.842" y1="-3.5306" x2="5.842" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="5.842" y1="4.1148" x2="-2.032" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="4.1148" x2="-2.032" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-3.4036" x2="5.715" y2="-3.4036" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="-3.4036" x2="5.715" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="5.715" y1="3.9878" x2="-1.905" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="-1.905" y1="3.9878" x2="-1.905" y2="-3.4036" width="0.1524" layer="51"/>
+<text x="-1.27" y="5.08" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<wire x1="0" y1="-1.016" x2="0" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="0" y1="-3.048" x2="0.381" y2="-2.159" width="0.127" layer="21"/>
+<wire x1="0" y1="-3.048" x2="-0.381" y2="-2.159" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.016" x2="3.81" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-3.048" x2="4.191" y2="-2.159" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-3.048" x2="3.429" y2="-2.159" width="0.127" layer="21"/>
+</package>
+<package name="ED350/2" library_version="3" library_locally_modified="yes">
+<pad name="1" x="-2.5" y="0" drill="1.3" shape="square"/>
+<pad name="2" x="2.5" y="0" drill="1.3"/>
+<wire x1="5.1" y1="4.6" x2="-5.1" y2="4.6" width="0.127" layer="21"/>
+<wire x1="-5.1" y1="4.6" x2="-5.1" y2="-4.6" width="0.127" layer="21"/>
+<wire x1="-5.1" y1="-4.6" x2="5.1" y2="-4.6" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-4.6" x2="5.1" y2="4.6" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="-4.318" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-4.318" x2="-2.032" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-3.048" x2="-3.048" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="-3.048" y1="-3.048" x2="-2.54" y2="-4.318" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="2.54" y2="-4.318" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-4.318" x2="3.048" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="3.048" y1="-3.048" x2="2.032" y2="-3.048" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-3.048" x2="2.54" y2="-4.318" width="0.127" layer="21"/>
+<text x="-3.81" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="CONN3-2.54P" library_version="3" library_locally_modified="yes">
+<description>Terminal block PCB Mound Side Wire Entry Stacking</description>
+<wire x1="-3.25" y1="-4.04" x2="-3.25" y2="4.04" width="0.15" layer="51"/>
+<wire x1="-3.25" y1="4.04" x2="3.25" y2="4.04" width="0.15" layer="51"/>
+<wire x1="3.25" y1="4.04" x2="3.25" y2="-4.04" width="0.15" layer="51"/>
+<wire x1="3.25" y1="-4.04" x2="-3.25" y2="-4.04" width="0.15" layer="51"/>
+<wire x1="-3.4" y1="-4.19" x2="-3.4" y2="4.19" width="0.15" layer="21"/>
+<wire x1="-3.4" y1="4.19" x2="3.4" y2="4.19" width="0.15" layer="21"/>
+<wire x1="3.4" y1="4.19" x2="3.4" y2="-4.19" width="0.15" layer="21"/>
+<wire x1="3.4" y1="-4.19" x2="-3.4" y2="-4.19" width="0.15" layer="21"/>
+<text x="-3.575" y="4.615" size="1" layer="25">&gt;NAME</text>
+<pad name="1" x="0" y="2.54" drill="1.1" diameter="1.7" shape="square"/>
+<pad name="2" x="0" y="0" drill="1.1" diameter="1.7"/>
+<pad name="3" x="0" y="-2.54" drill="1.1" diameter="1.7"/>
+<wire x1="-1.143" y1="2.54" x2="-2.921" y2="2.54" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="2.54" x2="-2.286" y2="2.921" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="2.54" x2="-2.286" y2="2.159" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="0" x2="-2.921" y2="0" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="0" x2="-2.286" y2="0.381" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="0" x2="-2.286" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="-2.54" x2="-2.921" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="-2.54" x2="-2.286" y2="-2.159" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="-2.54" x2="-2.286" y2="-2.921" width="0.127" layer="21"/>
+</package>
+<package name="CONN3_3.81P" library_version="3" library_locally_modified="yes">
+<pad name="1" x="0" y="0" drill="0.889" diameter="1.397" shape="square"/>
+<pad name="2" x="3.81" y="0" drill="0.889" diameter="1.397"/>
+<pad name="3" x="7.62" y="0" drill="0.889" diameter="1.397"/>
+<wire x1="-2.032" y1="-3.5306" x2="9.652" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="9.652" y1="-3.5306" x2="9.652" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="9.652" y1="4.1148" x2="-2.032" y2="4.1148" width="0.1524" layer="21"/>
+<wire x1="-2.032" y1="4.1148" x2="-2.032" y2="-3.5306" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-3.4036" x2="9.525" y2="-3.4036" width="0.1524" layer="51"/>
+<wire x1="9.525" y1="-3.4036" x2="9.525" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="9.525" y1="3.9878" x2="-1.905" y2="3.9878" width="0.1524" layer="51"/>
+<wire x1="-1.905" y1="3.9878" x2="-1.905" y2="-3.4036" width="0.1524" layer="51"/>
+<text x="-1.2446" y="5.1308" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<wire x1="0" y1="-1.143" x2="0" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.921" x2="-0.381" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.921" x2="0.381" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.143" x2="3.81" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.921" x2="3.429" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.921" x2="4.191" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-1.143" x2="7.62" y2="-2.921" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-2.921" x2="7.239" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-2.921" x2="8.001" y2="-2.286" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -608,8 +781,8 @@ Panel Mount</text>
 <wire x1="-10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-12.7" y1="-5.08" x2="-15.24" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-15.24" y1="-5.08" x2="-15.24" y2="2.54" width="0.254" layer="94"/>
-<pin name="P$1" x="-25.4" y="7.62" visible="pad" length="middle"/>
-<pin name="P$2" x="-25.4" y="-7.62" visible="pad" length="middle"/>
+<pin name="COIL+" x="-25.4" y="7.62" visible="pad" length="middle"/>
+<pin name="COIL-" x="-25.4" y="-7.62" visible="pad" length="middle"/>
 <wire x1="-15.24" y1="2.54" x2="-15.24" y2="5.08" width="0.254" layer="94"/>
 <wire x1="-12.7" y1="5.08" x2="-12.7" y2="7.62" width="0.254" layer="94"/>
 <wire x1="-12.7" y1="7.62" x2="-20.32" y2="7.62" width="0.254" layer="94"/>
@@ -667,6 +840,8 @@ Panel Mount</text>
 <circle x="20.32" y="-2.54" radius="0.254" width="0.254" layer="94"/>
 <wire x1="20.32" y1="-2.54" x2="19.812" y2="3.048" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="0" x2="20.32" y2="0" width="0.127" layer="94" style="shortdash"/>
+<text x="-19.558" y="5.842" size="1.27" layer="94">+</text>
+<text x="-19.558" y="-6.858" size="1.27" layer="94">-</text>
 </symbol>
 <symbol name="E-STOP_MODULE">
 <wire x1="-15.24" y1="5.08" x2="-12.7" y2="5.08" width="0.254" layer="94"/>
@@ -791,6 +966,77 @@ Panel Mount</text>
 <circle x="-15.24" y="-15.24" radius="1.524" width="0.254" layer="94"/>
 <pin name="RESET_IN+" x="30.48" y="-10.16" visible="pin" length="middle" rot="R180"/>
 <pin name="+12V" x="20.32" y="17.78" length="middle" rot="R270"/>
+</symbol>
+<symbol name="NC4D-JP">
+</symbol>
+<symbol name="EUROBLK-SCREW-4">
+<description>4 Position Wire to Board Terminal Block Horizontal with Board 0.100" (2.54mm) Through Hole</description>
+<pin name="1" x="-5.08" y="7.62" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="3" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="4" x="-5.08" y="-7.62" visible="pad" length="short" direction="pas"/>
+<wire x1="-2.54" y1="10.16" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<text x="-2.54" y="12.7" size="2.54" layer="95" align="top-left">&gt;NAME</text>
+<circle x="0" y="7.62" radius="1.93440625" width="0.254" layer="94"/>
+<circle x="0" y="2.54" radius="1.93440625" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="8.89" x2="0.762" y2="6.096" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="9.144" x2="1.27" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="3.048" x2="1.524" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="3.556" x2="1.778" y2="1.778" width="0.254" layer="94"/>
+<text x="3.048" y="6.858" size="1.778" layer="95">&gt;PIN1</text>
+<text x="3.048" y="1.778" size="1.778" layer="95">&gt;PIN2</text>
+<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<circle x="0" y="-2.54" radius="1.93440625" width="0.254" layer="94"/>
+<circle x="0" y="-7.62" radius="1.93440625" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-1.27" x2="0.762" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="1.27" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="-7.112" x2="1.524" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-6.604" x2="1.778" y2="-8.382" width="0.254" layer="94"/>
+<text x="3.048" y="-3.302" size="1.778" layer="95">&gt;PIN3</text>
+<text x="3.048" y="-8.382" size="1.778" layer="95">&gt;PIN4</text>
+</symbol>
+<symbol name="EUROBLK-SCREW-2">
+<description>TERMI-BLOK PCB MOUNT, 90 2P</description>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="7.62" size="2.54" layer="95" align="top-left">&gt;NAME</text>
+<pin name="1" x="-5.08" y="2.54" visible="pad" length="short"/>
+<pin name="2" x="-5.08" y="-2.54" visible="pad" length="short"/>
+<circle x="0" y="2.54" radius="1.93440625" width="0.254" layer="94"/>
+<circle x="0" y="-2.54" radius="1.93440625" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="3.81" x2="0.762" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="4.064" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="-2.032" x2="1.524" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-1.524" x2="1.778" y2="-3.302" width="0.254" layer="94"/>
+<text x="3.048" y="1.778" size="1.778" layer="95">&gt;PIN1</text>
+<text x="3.048" y="-3.302" size="1.778" layer="95">&gt;PIN2</text>
+</symbol>
+<symbol name="EUROBLK-SCREW-3">
+<description>Terminal block PCB Mound Side Wire Entry Stacking</description>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short"/>
+<pin name="2" x="-5.08" y="0" visible="pad" length="short"/>
+<pin name="3" x="-5.08" y="-5.08" visible="pad" length="short"/>
+<wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="10.16" size="2.54" layer="95" align="top-left">&gt;NAME</text>
+<circle x="0" y="5.08" radius="1.93440625" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.93440625" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="6.35" x2="0.762" y2="3.556" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="6.604" x2="1.27" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="0.508" x2="1.524" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.778" y2="-0.762" width="0.254" layer="94"/>
+<text x="3.048" y="4.318" size="1.778" layer="95">&gt;PIN1</text>
+<text x="3.048" y="-0.762" size="1.778" layer="95">&gt;PIN2</text>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<circle x="0" y="-5.08" radius="1.93440625" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-3.81" x2="0.762" y2="-6.604" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-3.556" x2="1.27" y2="-6.35" width="0.254" layer="94"/>
+<text x="3.048" y="-5.842" size="1.778" layer="95">&gt;PIN3</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1038,11 +1284,11 @@ Panel Mount</text>
 <connect gate="G$1" pin="CCOM" pad="CCOM"/>
 <connect gate="G$1" pin="CNC" pad="CNC"/>
 <connect gate="G$1" pin="CNO" pad="CNO"/>
+<connect gate="G$1" pin="COIL+" pad="IN+"/>
+<connect gate="G$1" pin="COIL-" pad="IN-"/>
 <connect gate="G$1" pin="DCOM" pad="DCOM"/>
 <connect gate="G$1" pin="DNC" pad="DNC"/>
 <connect gate="G$1" pin="DNO" pad="DNO"/>
-<connect gate="G$1" pin="P$1" pad="IN+"/>
-<connect gate="G$1" pin="P$2" pad="IN-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1106,6 +1352,217 @@ Panel Mount</text>
 <connect gate="G$1" pin="X_ERR/RESET" pad="X_ERR/RESET"/>
 <connect gate="G$1" pin="Y_ERR/RESET" pad="Y_ERR/RESET"/>
 <connect gate="G$1" pin="Z_ERR/RESET" pad="Z_ERR/RESET"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NC4D-JP-DC5V">
+<gates>
+<gate name="G$1" symbol="RELAY_4PDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NC4D-JP">
+<connects>
+<connect gate="G$1" pin="ACOM" pad="ACOM"/>
+<connect gate="G$1" pin="ANC" pad="ANC"/>
+<connect gate="G$1" pin="ANO" pad="ANO"/>
+<connect gate="G$1" pin="BCOM" pad="BCOM"/>
+<connect gate="G$1" pin="BNC" pad="BNC"/>
+<connect gate="G$1" pin="BNO" pad="BNO"/>
+<connect gate="G$1" pin="CCOM" pad="CCOM"/>
+<connect gate="G$1" pin="CNC" pad="CNC"/>
+<connect gate="G$1" pin="CNO" pad="CNO"/>
+<connect gate="G$1" pin="COIL+" pad="COIL+"/>
+<connect gate="G$1" pin="COIL-" pad="COIL-"/>
+<connect gate="G$1" pin="DCOM" pad="DCOM"/>
+<connect gate="G$1" pin="DNC" pad="DNC"/>
+<connect gate="G$1" pin="DNO" pad="DNO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EURO-CON-4" prefix="JP$">
+<description>4 Position Wire to Board Terminal Block Horizontal with Board 0.100" (2.54mm) Through Hole</description>
+<gates>
+<gate name="JP$0" symbol="EUROBLK-SCREW-4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_2.54P" package="CONN4-2.54P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+<connect gate="JP$0" pin="3" pad="3"/>
+<connect gate="JP$0" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AUTOMOTIVE" value="No"/>
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="CONN_GENDER" value="Female"/>
+<attribute name="CONN_ORIENTATION" value="Horizontal"/>
+<attribute name="CONTACT_MATERIAL" value="Tin"/>
+<attribute name="CURRENT_RATING" value="10A"/>
+<attribute name="DATASHEET" value="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Customer+Drawing%7F282834%7FC1%7Fpdf%7FEnglish%7FENG_CD_282834_C1.pdf%7F282834-4"/>
+<attribute name="DEVICE_CLASS_L1" value="Connectors"/>
+<attribute name="DEVICE_CLASS_L2" value="Terminal Blocks | Terminals"/>
+<attribute name="DEVICE_CLASS_L3" value="unset"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="TERM BLK 4P SIDE ENT 2.54MM PCB"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="A98335-ND"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Recommended_Land_Pattern"/>
+<attribute name="HEIGHT" value="10.3mm"/>
+<attribute name="IMPORTED_FROM" value="octopart"/>
+<attribute name="IS_FEMALE" value="yes"/>
+<attribute name="LEAD_FREE" value="Yes"/>
+<attribute name="MAX_WIRE_GAUGE" value="16"/>
+<attribute name="MF" value="TE"/>
+<attribute name="MFG_PACKAGE_IDENT" value="0"/>
+<attribute name="MFG_PACKAGE_IDENT_DATE" value="0"/>
+<attribute name="MFG_PACKAGE_IDENT_REV" value="0"/>
+<attribute name="MIN_WIRE_GAUGE" value="30"/>
+<attribute name="MOUNTING_TYPE" value="through hole"/>
+<attribute name="MOUSER_DESCRIPTION" value="Wire to Board 4 Position 2.54 mm Pitch 30-16 AWG Euro Style Terminal Block"/>
+<attribute name="MOUSER_PART_NUMBER" value="571-282834-4"/>
+<attribute name="MPN" value="282834-4"/>
+<attribute name="NUMBER_OF_CONTACTS" value="4"/>
+<attribute name="NUMBER_OF_ROWS" value="1"/>
+<attribute name="NUM_PINS" value="4"/>
+<attribute name="PACKAGE" value="HDR4"/>
+<attribute name="PIN1" value="" constant="no"/>
+<attribute name="PIN2" value="" constant="no"/>
+<attribute name="PIN3" value="" constant="no"/>
+<attribute name="PIN4" value="" constant="no"/>
+<attribute name="PITCH" value="2.54mm"/>
+<attribute name="PREFIX" value="J"/>
+<attribute name="ROHS" value="Yes"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+110°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VERIFICATION_VERSION" value="0.0.0.3"/>
+<attribute name="VOLTAGE_RATING" value="150V"/>
+</technology>
+</technologies>
+</device>
+<device name="_3.81P" package="CONN4_3.81P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+<connect gate="JP$0" pin="3" pad="3"/>
+<connect gate="JP$0" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EURO-CON-2" prefix="JP">
+<description>TERMI-BLOK PCB MOUNT, 90 2P</description>
+<gates>
+<gate name="JP$0" symbol="EUROBLK-SCREW-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_2.54P" package="CONN2_2.54P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="DATASHEET" value="https://upverter.com/datasheet/7f220f754b96d6f927a9f190bfd569f7426e06b7.pdf"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="CONN TERM BLOCK 2POS SIDE ENT 2.54MM"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="A98333-ND"/>
+<attribute name="LEAD_FREE" value="yes"/>
+<attribute name="MF" value="TE"/>
+<attribute name="MOUSER_PART_NUMBER" value="571-282834-2"/>
+<attribute name="MPN" value="282834-2"/>
+<attribute name="PACKAGE" value="PTH_TBLK_5MM54_6MM5"/>
+<attribute name="PREFIX" value="J"/>
+<attribute name="ROHS" value="yes"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+105°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+</technology>
+</technologies>
+</device>
+<device name="_3.81P" package="CONN2_3.81P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_5.00P" package="ED350/2">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EURO-CON-3" prefix="JP$">
+<description>Terminal block PCB Mound Side Wire Entry Stacking</description>
+<gates>
+<gate name="JP$0" symbol="EUROBLK-SCREW-3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_2.54P" package="CONN3-2.54P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+<connect gate="JP$0" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CENTROID_NOT_SPECIFIED" value="No"/>
+<attribute name="CONTACT_MATERIAL" value="Brass"/>
+<attribute name="CONTACT_PLATING" value="Tin"/>
+<attribute name="DATASHEET" value="http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=282834&amp;DocType=Customer+Drawing&amp;DocLang=English"/>
+<attribute name="DIGIKEY_DESCRIPTION" value="CONN 3 Position Wire to Board Terminal Block Horizontal with Board 0.100&quot; (2.54mm) Through Hole"/>
+<attribute name="DIGIKEY_PART_NUMBER" value="A98334-ND"/>
+<attribute name="ELV_COMPLIANT" value="Compliant"/>
+<attribute name="FLAMMABILITY_RATING" value="UL 94 V-0"/>
+<attribute name="HOUSING_COLOR" value="Green"/>
+<attribute name="HOUSING_MATERIAL" value="Nylon 6/6"/>
+<attribute name="IMPORTED_FROM" value="octopart"/>
+<attribute name="IS_FEMALE" value="yes"/>
+<attribute name="LEAD_FREE" value="yes"/>
+<attribute name="MF" value="TE"/>
+<attribute name="MOUNTING_TYPE" value="through hole"/>
+<attribute name="MOUSER_PART_NUMBER" value="571-2828343"/>
+<attribute name="MPN" value="282834-3"/>
+<attribute name="NUMBER_OF_CONTACTS" value="3 "/>
+<attribute name="NUMBER_OF_POSITIONS" value="3 "/>
+<attribute name="NUMBER_OF_ROWS" value="1 "/>
+<attribute name="NUM_PINS" value="3"/>
+<attribute name="OCTOPART_PART_NUMBER" value="d6ef1fe147770928"/>
+<attribute name="PACKAGE" value="PTH_TBLK_8MM08_6MM5"/>
+<attribute name="PIN_PITCH" value="2.54 mm"/>
+<attribute name="PREFIX" value="J"/>
+<attribute name="ROHS" value="yes"/>
+<attribute name="SIZE_HEIGHT" value="10 mm"/>
+<attribute name="SIZE_LENGTH" value="8.08 mm"/>
+<attribute name="SIZE_WIDTH" value="6.5 mm"/>
+<attribute name="TEMPERATURE_RANGE_HIGH" value="+105°C"/>
+<attribute name="TEMPERATURE_RANGE_LOW" value="-40°C"/>
+<attribute name="VOLTAGE" value="150V"/>
+</technology>
+</technologies>
+</device>
+<device name="_3.81P" package="CONN3_3.81P">
+<connects>
+<connect gate="JP$0" pin="1" pad="1"/>
+<connect gate="JP$0" pin="2" pad="2"/>
+<connect gate="JP$0" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
