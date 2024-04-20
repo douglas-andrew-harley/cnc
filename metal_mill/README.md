@@ -9,10 +9,11 @@ It consists of 2 parts
 
 Design File PDFs
 
-* [metal_mill_wiring.sch](metal_mill_wiring.pdf) (created in EagleCAD)
-* [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) (created in EagleCAD)
-* [FCCH_RFID_ESTOP.brd](FCCH_RFID_ESTOP.brd.pdf) (created in EagleCAD)
-* [panel_cutouts.FCStd](panel_cutouts.pdf) (created in FreeCAD)
+* [metal_mill_wiring.sch (pdf)](metal_mill_wiring.pdf) (created in EagleCAD)
+* [FCCH_RFID_ESTOP.sch (pdf)](FCCH_RFID_ESTOP.sch.pdf) (created in EagleCAD)
+* [FCCH_RFID_ESTOP.brd (pdf)](FCCH_RFID_ESTOP.brd.pdf) (created in EagleCAD)
+* [FCCH_RFID_ESTOP.brd (fab print pdf)](FCCH_RFID_ESTOP.brd.fab.pdf) (created in EagleCAD)
+* [panel_cutouts.FCStd (pdf)](panel_cutouts.pdf) (created in FreeCAD)
 
 
 ## Controller Cabinet Components
@@ -102,7 +103,7 @@ To connect components to GND, +5V and +12V, we use 3 bus bars that can terminate
 
 ### Case
 
-We are using an old desktop PC from a thrift store.  An alarm panel or similar would also be suitable.
+We are using an old desktop PC from a thrift store.  An alarm panel case or similar would also be suitable.
 
 ### Panel for connectors
 
@@ -113,7 +114,7 @@ The file [panel_cutouts.FCStd](panel_cutouts.pdf) (created with FreeCAD) documen
 
 Inside the controller cabinet, all components are connected via the following wire harnesses. The Wn label of each harness refers to the designation in the schematic.
 
-The schematic [metal_mill_wiring.sch](metal_mill_wiring.pdf) (created in EagleCAD) documents the connections.
+The schematic [metal_mill_wiring.sch (pdf)](metal_mill_wiring.pdf) (created in EagleCAD) documents the connections.
 
 ### Cables required
 
@@ -133,15 +134,26 @@ bare leads to bare leads
 
 * 22 gauge 4 conductor cable
   * one end: bare leads into the terminals on the G320X's
-    * black: COM
-    * C1:    STEP
-    * C2:    DIR
-    * C3:    ERR/RES
-  * other end: bare leads into the 7i96s TB3 terminals (see schematic)
-    * black: GND(n)
-    * C1:   STEP(n)+
-    * C2:   DIR(n)+
-    * C3:   INPUT8 (ERR/RES input)
+    * cable shield: no connection (only connect on other end)
+    * black:  COM
+    * blue:   STEP
+    * yellow: DIR
+    * orange: ERR/RES
+  * other end: bare leads into the 7i96s TB3 and TB3 terminals (see schematic)
+    * cable shield: connect to chassis ground screw located near the 7i96s
+    * black:  TB1 GND(n)
+    * blue:   TB1 STEP(n)+
+    * yellow: TB1 DIR(n)+
+    * orange: TB3 INPUT8 (ERR/RES input)
+
+Build Notes:
+
+We used a shielded 8 conductor wire because the maker space had a big spool of it. The 4 unused conductors were cut short and sealed under a short piece of heat shrink.
+
+On the 7i96s end, the orange and shield wires need to be about 4 inches longer than the others because they go to different places. Strip 5 inches of the cable insulation. cut black,blue,yellow wires to about 1.25 inches. Heat shrink a 3/8 inch tube so that half is over the insulation and half is over the protrubing wires. 
+
+On the G320X end, the orange wire needs to be longer than the others by about an inch. Strip a little over 2 inches of insulation. Cut the shield wire short to the insulation (wont be connected on this end). Cut the black,blue, and yellow wires to about an inch. Heat shrink about 3/8 inch tube over the insulation and wires.
+
 
 ### (W2) Motor Power and Encoder Jacks
 
@@ -239,6 +251,13 @@ HRS DF11-16DS 16 pin IDC to bare leads
     * C2: pin 4
     * C3: pin 5
     * C4: pin 6
+  * other end: bare leads screwed into 7i96s terminals
+    * C1: TB3-16 (OUT1+)
+    * C2: TB3-15 (OUT1-)
+    * C3: TB3-1  (INPUT0)
+    * C4: TB3-2  (INPUT1)
+
+Note that the DF11-16DS connector on the PS has 16 positions. 1-6 are connected as above. In addition, two loop back wires on the connector are needed to connect positions 13 to 15, and 14 to 16. The PS came with a connector that had these loop back wires already installed. These loopback wires implement the local voltage sensing as described in the datasheet. If we ever want to implement remote sensing to compensate for drops seen at the motors, we would replace theses loopbacks with wires connecting 15 and 16 to the + and - motor leads.
 
 ### (W8) 7i96s Power
 
@@ -258,7 +277,9 @@ The FCCH_RFID_ESTOP module provides two functions.
 
 The ERR/RES lines of the G320X drivers are brought to this module. They are attached to ground (which inhibits the drivers) through the normally closed contacts of a safety relay. When both a valid RFID tag is present and the E-Stop switch is not active, the relay is energized, breaking the connection to ground and enabling the drivers.
 
-The file [FCCH_RFID_ESTOP.sch](FCCH_RFID_ESTOP.pdf) contains the schematic for the custom PCB and [FCCH_RFID_ESTOP.brd](FCCH_RFID_ESTOP.brd.pdf) is the board layout.
+The file [FCCH_RFID_ESTOP.sch (pdf)](FCCH_RFID_ESTOP.sch.pdf) contains the schematic for the custom PCB and [FCCH_RFID_ESTOP.brd (pdf)](FCCH_RFID_ESTOP.brd.pdf) is the board layout.
+
+For physical dimensions of the board refer to [FCCH_RFID_ESTOP.brd.fab.pdf](FCCH_RFID_ESTOP.brd.fab.pdf)
 
 ## FCCH_RFID_ESTOP Cable Harnesses
 
